@@ -1,0 +1,22 @@
+server:
+  port: 8088
+  servlet:
+    context-path: /demo-service
+spring:
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/user
+    username: postgres
+    password: ikm123
+  liquibase:
+    enabled: 'true'
+    drop-first: 'false'
+    change-log: classpath:db/changelog/changelog-master.xml
+    parameters:
+      liquibase.changelogLockWaitTimeInMinutes: 20
+  jpa:
+    hibernate:
+      ddl-auto: none
+
+
+

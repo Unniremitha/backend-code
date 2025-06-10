@@ -1,0 +1,21 @@
+CREATE TABLE k_smart_user(
+    user_id  uuid not null primary key,
+    phone_number varchar(64),
+    tenant_id    integer,
+    name varchar(255),
+    is_active BOOLEAN,
+    is_kyc_verified BOOLEAN,
+    aadhaar_no VARCHAR(255),
+    is_first_login boolean,
+    email varchar(255),
+    whatsapp_number varchar(255),
+    user_type VARCHAR(255) ,
+    reg_no bigint,
+    created_at TIMESTAMP default NOW() ,
+    is_document_verified BOOLEAN default FALSE,
+    updated_at TIMESTAMP default NOW() ,
+    dob VARCHAR(64),
+    gender VARCHAR(64),
+    document_no VARCHAR(255),
+    country_type BOOLEAN
+);
